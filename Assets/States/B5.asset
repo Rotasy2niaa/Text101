@@ -18,5 +18,4 @@ MonoBehaviour:
   - '> Walk to my apartment.'
   nextStates:
   - {fileID: 11400000, guid: ab2332450681fd44eae48161573e5eba, type: 2}
-  hasMusicChoice: 0
-  musicChoices: []
+  stateImage: {fileID: 21300000, guid: 002bf3c20f3f814479a09426400ad0ab, type: 3}

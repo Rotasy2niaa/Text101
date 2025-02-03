@@ -19,5 +19,4 @@ MonoBehaviour:
   nextStates:
   - {fileID: 11400000, guid: b444544fda384104dbf650d501819137, type: 2}
   - {fileID: 11400000, guid: b30196f9fd410564eb7e4a1caafce953, type: 2}
-  hasMusicChoice: 0
-  musicChoices: []
+  stateImage: {fileID: 21300000, guid: 8edc57713cdbf014a8affe29e7773321, type: 3}

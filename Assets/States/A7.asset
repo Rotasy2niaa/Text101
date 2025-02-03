@@ -19,5 +19,4 @@ MonoBehaviour:
   - '> Head to the school gate.'
   nextStates:
   - {fileID: 11400000, guid: ed1a79eebf3fd3d40aa57b2a4338a8a5, type: 2}
-  hasMusicChoice: 0
-  musicChoices: []
+  stateImage: {fileID: 21300000, guid: 5c66ffbd33fc12c41b30f5a509fb7574, type: 3}
