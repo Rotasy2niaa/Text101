@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
+  m_Name: A1 Starting
+  m_EditorClassIdentifier: 
+  storyText: "I finally finished my classes today.\nThe streets are desolate, and
+    I\u2019m the only one walking.\nThe air is cold against my nose, and it hurts
+    if I breathe in too deeply.\nThe wind howls past my ears, violently blowing the
+    leaves off the trees.\nIt\u2019s at moments like this that I truly feel alive.\n\n1.
+    Skating around the school for a bit.\n2. Skating my way home.\n\n"
+  nextStates:
+  - {fileID: 11400000, guid: b444544fda384104dbf650d501819137, type: 2}
+  - {fileID: 11400000, guid: c45315159abf1f74da0d2560153df22d, type: 2}

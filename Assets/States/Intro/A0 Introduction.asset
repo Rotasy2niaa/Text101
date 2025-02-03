@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: A0 Introduction
   m_EditorClassIdentifier: 
-  storyText: 
-  nextStates: []
+  storyText: "Welcome to the Game!  \r\n\r\nUse Key 123 to make your choices.  \n\nEnjoy!\r\n\r\n1.
+    Start"
+  nextStates:
+  - {fileID: 11400000, guid: 5b8d44d2140d9824ca99431bcba39074, type: 2}

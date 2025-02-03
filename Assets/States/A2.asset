@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
+  m_Name: A2
+  m_EditorClassIdentifier: 
+  storyText: "It\u2019s late, and there\u2019s not a single car on the road.\nI can
+    skate freely on the school streets.\n\n1. Head to the square with the fountain.\n2.
+    Look for the vending machine."
+  nextStates:
+  - {fileID: 11400000, guid: ff1dcd4a9a0cd494daa98734d36dde30, type: 2}
+  - {fileID: 11400000, guid: 71ec6f5b706916f45b3c7a5f3470b3c2, type: 2}

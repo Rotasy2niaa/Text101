@@ -4,5 +4,5 @@ I finished classes today.
 风在耳边呼啸，树叶也被粗暴得吹落
 就是这种时刻我才感觉自己活着
 
-Choice 1 滑滑板往家走
-Choice 2 滑滑板在学校逛一下
+Choice 1 滑滑板在学校逛一下
+Choice 2 滑滑板往家走

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
+  m_Name: A6
+  m_EditorClassIdentifier: 
+  storyText: "I put away my camera.\nShooting film is one of my few hobbies.\nIn
+    this era where smartphones make recording life so easy, using film feels like
+    a commitment to me.\nI\u2019m mindful of the cost of each roll of film, so every
+    press of the shutter needs to be meaningful, valuable.\nThis mindset makes every
+    developed roll of film feel special to me.\n\n1. It\u2019s late. Head to the
+    school gate.\n2. Head to the school gate."
+  nextStates:
+  - {fileID: 11400000, guid: ed1a79eebf3fd3d40aa57b2a4338a8a5, type: 2}
