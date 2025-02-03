@@ -13,5 +13,9 @@ MonoBehaviour:
   m_Name: C2
   m_EditorClassIdentifier: 
   storyText: Injured.
+  options:
+  - '> Continue'
   nextStates:
   - {fileID: 11400000, guid: 95ffd17b119a3b94fa0425d66124ba26, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

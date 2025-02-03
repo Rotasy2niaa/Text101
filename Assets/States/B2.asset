@@ -14,7 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: "I check on my phone to see when the bus will arrive.\nIt\u2019s 15
     minutes away. I put on my headphones and pick a song to listen to\u2014three
-    times on repeat.\n\n1. \"Rain\" by  B\xF4a\r\n1. \"Slower\" by Mineral"
+    times on repeat."
+  options:
+  - "> \"Rain\" by  B\xF4a"
+  - '> "Slower" by Mineral'
   nextStates:
   - {fileID: 11400000, guid: 578e901305d40c342ad4928a9acdd5f0, type: 2}
   - {fileID: 11400000, guid: 578e901305d40c342ad4928a9acdd5f0, type: 2}
+  hasMusicChoice: 1
+  musicChoices:
+  - {fileID: 8300000, guid: c6ea8cb68e1eeda47a200384bca7f921, type: 3}
+  - {fileID: 8300000, guid: 8381380cf4640e841a131d0eb05b0c99, type: 3}

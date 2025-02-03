@@ -3,7 +3,11 @@ guid: 9ee125d973ce1404ca73d47311223653
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - storyTextComponent: {instanceID: 0}
+  - buttonPrefab: {instanceID: 0}
+  - buttonContainer: {instanceID: 0}
+  - startingState: {fileID: 11400000, guid: 24eef6e4417ce284fbee7c2472e9a714, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

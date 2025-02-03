@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: A8
   m_EditorClassIdentifier: 
-  storyText: "Why is there potato soup here\u2026 and it\u2019s even hot, like in
-    Japanese vending machines.\nIt\u2019s so good! Drinking hot soup on a cold day
-    feels like such a blessing.\n\n1. Head to the school gate.\n"
+  storyText: "Why is there potato soup here\u2026 and it\u2019s even hot, \nlike
+    in Japanese vending machines.\nIt\u2019s so good! \nDrinking hot soup on a cold
+    day feels like such a blessing.\n\n1. Head to the school gate.\n"
+  options:
+  - '> Head to the school gate.'
   nextStates:
   - {fileID: 11400000, guid: ed1a79eebf3fd3d40aa57b2a4338a8a5, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

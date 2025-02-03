@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: A2
   m_EditorClassIdentifier: 
   storyText: "It\u2019s late, and there\u2019s not a single car on the road.\nI can
-    skate freely on the school streets.\n\n1. Head to the square with the fountain.\n2.
-    Look for the vending machine."
+    skate freely on the school streets."
+  options:
+  - '> Head to the square with the fountain.'
+  - '> Look for the vending machine.'
   nextStates:
   - {fileID: 11400000, guid: ff1dcd4a9a0cd494daa98734d36dde30, type: 2}
   - {fileID: 11400000, guid: 71ec6f5b706916f45b3c7a5f3470b3c2, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

@@ -21,6 +21,9 @@ MonoBehaviour:
     of leaves floating in the water.
 
     The gray rabbit by the bushes.'
+  options:
+  - Play Again
   nextStates:
-  - {fileID: 11400000, guid: 5b8d44d2140d9824ca99431bcba39074, type: 2}
   - {fileID: 11400000, guid: 24eef6e4417ce284fbee7c2472e9a714, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: A5
   m_EditorClassIdentifier: 
-  storyText: 'Vending Machine
-
-
-    1. Root Beer
-
-    2. Potato Soup'
+  storyText: Vending Machine
+  options:
+  - '> Root Beer'
+  - '> Potato Soup'
   nextStates:
   - {fileID: 11400000, guid: c2f60d1db06e762439df7f0d2e738e54, type: 2}
   - {fileID: 11400000, guid: 5c42e02f5b99e9e48bc71def96f72f62, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: A9
   m_EditorClassIdentifier: 
-  storyText: "A gray rabbit suddenly darts out from the bushes!\nHow lucky! I\u2019ve
+  storyText: "A gray rabbit suddenly darts out from the bushes!\nHow lucky! \nI\u2019ve
     never seen a rabbit on campus before.\nThe camera is hanging around my neck.
-    Should I take a photo of it?\n\n1. Take the photo.\n2. Don\u2019t take the photo."
+    \nShould I take a photo of it?"
+  options:
+  - '> Take the photo.'
+  - "> Don\u2019t take the photo."
   nextStates:
   - {fileID: 11400000, guid: 775ffda61260e254ca3545e23941074c, type: 2}
   - {fileID: 11400000, guid: 2d46e56068b489f40babd37bb48dd9e7, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

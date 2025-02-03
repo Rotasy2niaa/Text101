@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: A11
   m_EditorClassIdentifier: 
   storyText: "Forget it, it\u2019s too dark at night, and the photo might not turn
-    out well anyway. No need to waste film.\nIt\u2019s late. Time to go home.\n\n1.
-    Head to the bus stop."
+    out well anyway. No need to waste film.\nIt\u2019s late. Time to go home."
+  options:
+  - '> Head to the bus stop.'
   nextStates:
   - {fileID: 11400000, guid: c45315159abf1f74da0d2560153df22d, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

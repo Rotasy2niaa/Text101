@@ -13,8 +13,14 @@ MonoBehaviour:
   m_Name: B3
   m_EditorClassIdentifier: 
   storyText: "It\u2019ll take about 20 minutes to skate home. I put on my headphones
-    and pick a song to listen to\u2014four times on repeat.\n\n1. \"Rain\" by  B\xF4a\r\n2.
-    \"Slower\" by Mineral"
+    and pick a song to listen to\u2014four times on repeat."
+  options:
+  - "> \"Rain\" by  B\xF4a\r"
+  - '> "Slower" by Mineral'
   nextStates:
   - {fileID: 11400000, guid: dd42820812361b945adfb9602e0be904, type: 2}
   - {fileID: 11400000, guid: dd42820812361b945adfb9602e0be904, type: 2}
+  hasMusicChoice: 1
+  musicChoices:
+  - {fileID: 8300000, guid: c6ea8cb68e1eeda47a200384bca7f921, type: 3}
+  - {fileID: 8300000, guid: 8381380cf4640e841a131d0eb05b0c99, type: 3}

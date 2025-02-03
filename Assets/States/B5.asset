@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: B5
   m_EditorClassIdentifier: 
   storyText: "The injury isn\u2019t too serious\u2014just some scraped skin and bleeding,
-    no bones hurt.\nI\u2019m not far from home. Walk back and treat it there.\n\n1.
-    Walk to my apartment."
+    no bones hurt.\nI\u2019m not far from home. Walk back and treat it there."
+  options:
+  - '> Walk to my apartment.'
   nextStates:
   - {fileID: 11400000, guid: ab2332450681fd44eae48161573e5eba, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

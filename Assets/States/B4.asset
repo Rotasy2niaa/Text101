@@ -15,9 +15,10 @@ MonoBehaviour:
   storyText: 'Listening to music, I feel a growing excitement beneath my calm exterior.
 
     But
-    unexpectedly, I got too immersed in the music and fell.
-
-
-    1. Check the wound.'
+    unexpectedly, I got too immersed in the music and fell.'
+  options:
+  - '> Check the wound.'
   nextStates:
   - {fileID: 11400000, guid: 33891348fe36e0e4ea6821f9ab14d312, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

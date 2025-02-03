@@ -20,12 +20,11 @@ MonoBehaviour:
     A few
     leaves are floating in the fountain.
 
-
-    1. Take a picture of the fountain.
-
-    2.
-    Take a picture of the leaves in the fountain.
-
 '
+  options:
+  - '> Take a picture of the fountain.'
+  - '> Take a picture of the leaves in the fountain.'
   nextStates:
   - {fileID: 11400000, guid: 8381067953d42a74c82cc41cf6694c68, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

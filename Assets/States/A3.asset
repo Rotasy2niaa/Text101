@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: A3
   m_EditorClassIdentifier: 
-  storyText: "The bus still hasn\u2019t arrived.\n\n1. Stay at school for a while.\n2.
-    Wait."
+  storyText: "The bus still hasn\u2019t arrived."
+  options:
+  - '> Stay at school for a while.'
+  - '> Wait.'
   nextStates:
   - {fileID: 11400000, guid: b444544fda384104dbf650d501819137, type: 2}
   - {fileID: 11400000, guid: b30196f9fd410564eb7e4a1caafce953, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []

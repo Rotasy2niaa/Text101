@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: A7
   m_EditorClassIdentifier: 
   storyText: "Root beer is my favorite drink, especially with vanilla ice cream\u2026\nWhy
-    don\u2019t the grocery stores near my apartment sell root beer? The vending machine
-    price is $8 a can\u2014so expensive!\n\n1. Head to the school gate.\n"
+    don\u2019t the grocery stores near my apartment sell root beer? \nThe vending
+    machine price is $8 a can\n\u2014so expensive!\n"
+  options:
+  - '> Head to the school gate.'
   nextStates:
   - {fileID: 11400000, guid: ed1a79eebf3fd3d40aa57b2a4338a8a5, type: 2}
+  hasMusicChoice: 0
+  musicChoices: []
