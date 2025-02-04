@@ -457,7 +457,9 @@ MonoBehaviour:
   buttonContainer: {fileID: 1110640288}
   startingState: {fileID: 11400000, guid: 24eef6e4417ce284fbee7c2472e9a714, type: 2}
   stateImageComponent: {fileID: 1153212277}
-  typingSpeed: 0.07
+  backgroundMusic: {fileID: 306455942}
+  gameMusic: {fileID: 1261185020}
+  typingSpeed: 0.02
 --- !u!4 &278531657
 Transform:
   m_ObjectHideFlags: 0

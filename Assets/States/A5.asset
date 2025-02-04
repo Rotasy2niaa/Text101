@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: A5
   m_EditorClassIdentifier: 
-  storyText: Vending Machine
+  storyText: "It's so dark, only the vending machine glows, \nlighting up the surrounding
+    area.  \r\nIt feels almost sacred.  \r\nWhat should I drink?"
   options:
   - '> Root Beer'
   - '> Potato Soup'
@@ -20,3 +21,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2f60d1db06e762439df7f0d2e738e54, type: 2}
   - {fileID: 11400000, guid: 5c42e02f5b99e9e48bc71def96f72f62, type: 2}
   stateImage: {fileID: 21300000, guid: 02aab15edbb0f31438ff75cedff855e8, type: 3}
+  hasMusicChoice: 0
+  musicChoices: []
