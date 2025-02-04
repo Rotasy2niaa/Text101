@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: D1
   m_EditorClassIdentifier: 
-  storyText: 'The photos I took today:
+  storyText: 'Today I looked back at my journey. Here are the photos I took:
 
+    {PHOTOS}
 
-    The fountain at night.
-
-    A close-up
-    of leaves floating in the water.
-
-    The gray rabbit by the bushes.'
+'
   options:
-  - Play Again
+  - '> Play Again'
   nextStates:
   - {fileID: 11400000, guid: 24eef6e4417ce284fbee7c2472e9a714, type: 2}
+  stateImage: {fileID: 0}
   hasMusicChoice: 0
   musicChoices: []
+  isPhotoOptions: 
+  photoDescriptions: []
+  isFinalState: 1

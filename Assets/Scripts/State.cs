@@ -3,63 +3,34 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "State")]
 public class State : ScriptableObject
 {
-    [TextArea(14, 10)][SerializeField] string storyText; // Story text
-    [TextArea(3, 3)][SerializeField] string[] options; // Option texts
-    [SerializeField] State[] nextStates; // Next states
-    [SerializeField] Sprite stateImage; // State image
-    [SerializeField] bool hasMusicChoice = false; // Whether this state includes a music choice
-    [SerializeField] AudioClip[] musicChoices; // Music choices for this state
+    [TextArea(14, 10)][SerializeField] string storyText;
+    [TextArea(3, 3)][SerializeField] string[] options;
+    [SerializeField] State[] nextStates;
+    [SerializeField] Sprite stateImage;
+    [SerializeField] bool hasMusicChoice = false;
+    [SerializeField] AudioClip[] musicChoices;
+    [SerializeField] bool[] isPhotoOptions;
+    [TextArea(2, 2)][SerializeField] string[] photoDescriptions;
+    [SerializeField] bool isFinalState = false;
 
-    /// <summary>
-    /// Returns the story text of this state.
-    /// </summary>
-    public string GetStateStory()
-    {
-        return storyText;
-    }
+    public string GetStateStory() => storyText;
 
-    /// <summary>
-    /// Returns the option texts for this state.
-    /// </summary>
-    public string[] GetOptions()
-    {
-        return options;
-    }
+    public string[] GetOptions() => options;
 
-    /// <summary>
-    /// Returns the next states associated with this state.
-    /// </summary>
-    public State[] GetNextStates()
-    {
-        return nextStates;
-    }
+    public State[] GetNextStates() => nextStates;
 
-    /// <summary>
-    /// Returns the image associated with this state.
-    /// </summary>
-    public Sprite GetStateImage()
-    {
-        return stateImage;
-    }
+    public Sprite GetStateImage() => stateImage;
 
-    /// <summary>
-    /// Checks if this state has music choices.
-    /// </summary>
-    public bool HasMusicChoice()
-    {
-        return hasMusicChoice && musicChoices != null && musicChoices.Length > 0;
-    }
+    public bool HasMusicChoice() => hasMusicChoice && musicChoices != null && musicChoices.Length > 0;
 
-    /// <summary>
-    /// Returns the music choice for the given index, if valid.
-    /// </summary>
-    public AudioClip GetSelectedMusic(int index)
-    {
-        if (HasMusicChoice() && index >= 0 && index < musicChoices.Length)
-        {
-            return musicChoices[index];
-        }
+    public AudioClip GetSelectedMusic(int index) =>
+        (HasMusicChoice() && index >= 0 && index < musicChoices.Length) ? musicChoices[index] : null;
 
-        return null; // Return null if no valid music is found
-    }
+    public bool IsPhotoOption(int index) =>
+        isPhotoOptions != null && index >= 0 && index < isPhotoOptions.Length && isPhotoOptions[index];
+
+    public string GetPhotoDescription(int index) =>
+        (photoDescriptions != null && index >= 0 && index < photoDescriptions.Length) ? photoDescriptions[index] : null;
+
+    public bool IsFinalState() => isFinalState;
 }

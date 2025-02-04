@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: C2
   m_EditorClassIdentifier: 
-  storyText: Injured.
+  storyText: Arrived home safely but injured.
   options:
   - '> Continue'
   nextStates:
   - {fileID: 11400000, guid: 95ffd17b119a3b94fa0425d66124ba26, type: 2}
+  stateImage: {fileID: 0}
   hasMusicChoice: 0
   musicChoices: []
+  isPhotoOptions: 
+  photoDescriptions: []
+  isFinalState: 0

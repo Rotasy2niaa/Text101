@@ -22,3 +22,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 775ffda61260e254ca3545e23941074c, type: 2}
   - {fileID: 11400000, guid: 2d46e56068b489f40babd37bb48dd9e7, type: 2}
   stateImage: {fileID: 21300000, guid: 3af28736380d4634b84b7bb1d2ef6ce0, type: 3}
+  hasMusicChoice: 0
+  musicChoices: []
+  isPhotoOptions: 0100
+  photoDescriptions:
+  - '"gray rabbit from the bushes"'
+  - 
+  isFinalState: 0

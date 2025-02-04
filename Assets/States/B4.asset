@@ -17,7 +17,16 @@ MonoBehaviour:
     But
     unexpectedly, I got too immersed in the music and fell.'
   options:
+  - '> Check the wound and take picture.'
   - '> Check the wound.'
   nextStates:
   - {fileID: 11400000, guid: 33891348fe36e0e4ea6821f9ab14d312, type: 2}
+  - {fileID: 11400000, guid: 33891348fe36e0e4ea6821f9ab14d312, type: 2}
   stateImage: {fileID: 21300000, guid: eb58f18234c02d5409cb719a359cac7d, type: 3}
+  hasMusicChoice: 0
+  musicChoices: []
+  isPhotoOptions: 0100
+  photoDescriptions:
+  - '"bleeding wound"'
+  - 
+  isFinalState: 0

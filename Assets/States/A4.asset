@@ -23,7 +23,15 @@ MonoBehaviour:
 '
   options:
   - '> Take a picture of the fountain.'
-  - '> Take a picture of the leaves in the fountain.'
+  - '> Do not take picture.'
   nextStates:
   - {fileID: 11400000, guid: 8381067953d42a74c82cc41cf6694c68, type: 2}
+  - {fileID: 11400000, guid: 8381067953d42a74c82cc41cf6694c68, type: 2}
   stateImage: {fileID: 21300000, guid: 238af6a82365068469e358c0a5477f7d, type: 3}
+  hasMusicChoice: 0
+  musicChoices: []
+  isPhotoOptions: 0100
+  photoDescriptions:
+  - '"The fountain at night."'
+  - 
+  isFinalState: 0
