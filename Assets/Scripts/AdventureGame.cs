@@ -17,6 +17,7 @@ public class AdventureGame : MonoBehaviour
     private State state; // 当前状态
     private bool isTyping = false; // 防止重复触发打字效果
     private bool isCustomMusicPlaying = false; // 判断是否播放自定义音乐
+    private AudioClip currentCustomMusic = null; // 当前播放的自定义音乐
 
     void Start()
     {
@@ -32,12 +33,12 @@ public class AdventureGame : MonoBehaviour
     private IEnumerator PlayTypewriterEffect(string fullText, System.Action onComplete = null)
     {
         isTyping = true;
-        storyTextComponent.text = ""; // 清空故事文本
+        storyTextComponent.text = "";
         HideOptions(); // 隐藏选项按钮
 
         foreach (char letter in fullText)
         {
-            storyTextComponent.text += letter; // 按字显示
+            storyTextComponent.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
 
@@ -107,18 +108,13 @@ public class AdventureGame : MonoBehaviour
     {
         if (isTyping) return; // 如果正在打字，禁止切换状态
 
-        // 切换到选中的状态
-        State nextState = state.GetNextStates()[index];
+        State nextState = state.GetNextStates()[index]; // 获取下一个状态
 
-        // 处理音乐选择
+        // 如果有音乐选择，播放新音乐；否则，保持当前音乐状态
         if (state.HasMusicChoice())
         {
-            AudioClip selectedMusic = state.GetSelectedMusic(index); // 根据选项获取对应音乐
+            AudioClip selectedMusic = state.GetSelectedMusic(index);
             PlayCustomMusic(selectedMusic); // 播放选中的音乐
-        }
-        else
-        {
-            StopCustomMusic(); // 停止自定义音乐，恢复背景音乐
         }
 
         state = nextState; // 更新当前状态
@@ -147,11 +143,12 @@ public class AdventureGame : MonoBehaviour
     /// </summary>
     private void PlayCustomMusic(AudioClip selectedMusic)
     {
-        if (selectedMusic == null) return; // 没有音乐时跳过
+        if (selectedMusic == currentCustomMusic) return; // 如果选择的音乐与当前音乐相同，跳过
 
+        currentCustomMusic = selectedMusic; // 更新当前音乐
         isCustomMusicPlaying = true;
 
-        // 暂停背景音乐
+        // 停止背景音乐
         if (backgroundMusic.isPlaying)
         {
             backgroundMusic.Pause();
@@ -163,13 +160,14 @@ public class AdventureGame : MonoBehaviour
     }
 
     /// <summary>
-    /// 停止自定义音乐并恢复背景音乐
+    /// 停止自定义音乐
     /// </summary>
     private void StopCustomMusic()
     {
         if (isCustomMusicPlaying)
         {
             isCustomMusicPlaying = false;
+            currentCustomMusic = null; // 清除当前音乐记录
             gameMusic.Stop(); // 停止自定义音乐
 
             if (!backgroundMusic.isPlaying)
