@@ -26,7 +26,8 @@ MonoBehaviour:
   hasMusicChoice: 0
   musicChoices: []
   isPhotoOptions: 0100
+  photoSprites:
+  - {fileID: 21300000, guid: 002bf3c20f3f814479a09426400ad0ab, type: 3}
   photoDescriptions:
-  - '"bleeding wound"'
-  - 
+  - '"My bleeding wound"'
   isFinalState: 0

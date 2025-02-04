@@ -31,7 +31,8 @@ MonoBehaviour:
   hasMusicChoice: 0
   musicChoices: []
   isPhotoOptions: 0100
+  photoSprites:
+  - {fileID: 21300000, guid: 238af6a82365068469e358c0a5477f7d, type: 3}
   photoDescriptions:
-  - '"The fountain at night."'
-  - 
+  - '"Fountain at night"'
   isFinalState: 0

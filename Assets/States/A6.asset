@@ -12,15 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6f3a72736d8a4b45be448b1190dc143, type: 3}
   m_Name: A6
   m_EditorClassIdentifier: 
-  storyText: "I put away my camera.\nShooting film is one of my few hobbies.\nIn
-    this era where smartphones make recording life so easy, using film feels like
-    a commitment to me.\nI\u2019m mindful of the cost of each roll of film, so every
-    press of the shutter needs to be meaningful, valuable.\nThis mindset makes every
-    developed roll of film feel special to me."
+  storyText: "Shooting film is one of my few hobbies.\nIn this era where smartphones
+    make recording life so easy, using film feels like a commitment to me.\nI\u2019m
+    mindful of the cost of each roll of film, so every press of the shutter needs
+    to be meaningful, valuable.\nThis mindset makes every developed roll of film
+    feel special to me."
   options:
   - "> It\u2019s late. Head to the school gate.\n"
   nextStates:
   - {fileID: 11400000, guid: ed1a79eebf3fd3d40aa57b2a4338a8a5, type: 2}
-  stateImage: {fileID: 0}
+  stateImage: {fileID: 21300000, guid: 22b880140273c2d4bb96cf3c2a3101c6, type: 3}
   hasMusicChoice: 0
   musicChoices: []
+  isPhotoOptions: 
+  photoSprites: []
+  photoDescriptions: []
+  isFinalState: 0

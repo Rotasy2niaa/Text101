@@ -17,9 +17,10 @@ MonoBehaviour:
   - '> Continue'
   nextStates:
   - {fileID: 11400000, guid: 95ffd17b119a3b94fa0425d66124ba26, type: 2}
-  stateImage: {fileID: 0}
+  stateImage: {fileID: 21300000, guid: 54ca01a479dd0e941aadddcc713305ce, type: 3}
   hasMusicChoice: 0
   musicChoices: []
   isPhotoOptions: 
+  photoSprites: []
   photoDescriptions: []
   isFinalState: 0

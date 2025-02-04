@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   storyText: "I finally finished my classes today.\nThe streets are desolate, and
     I\u2019m the only one walking.\nThe air is cold against my nose, and it hurts
-    if I breathe in too deeply.\nThe wind howls past my ears, violently blowing the
-    leaves off the trees.\nIt\u2019s at moments like this that I truly feel alive."
+    if I breathe in too deeply.\n\nThe wind howls past my ears, violently blowing
+    the leaves off the trees.\nIt\u2019s at moments like this that I truly feel alive."
   options:
   - '> Skating around the school for a bit.'
   - '> Skating my way home.  '
@@ -23,3 +23,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b444544fda384104dbf650d501819137, type: 2}
   - {fileID: 11400000, guid: c45315159abf1f74da0d2560153df22d, type: 2}
   stateImage: {fileID: 21300000, guid: a388aac3f1ad36f49bff577efde6b29b, type: 3}
+  hasMusicChoice: 0
+  musicChoices: []
+  isPhotoOptions: 
+  photoSprites: []
+  photoDescriptions: []
+  isFinalState: 0

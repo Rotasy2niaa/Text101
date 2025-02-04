@@ -25,7 +25,8 @@ MonoBehaviour:
   hasMusicChoice: 0
   musicChoices: []
   isPhotoOptions: 0100
+  photoSprites:
+  - {fileID: 21300000, guid: 3af28736380d4634b84b7bb1d2ef6ce0, type: 3}
   photoDescriptions:
-  - '"gray rabbit from the bushes"'
-  - 
+  - '"Rabbit from the bushes"'
   isFinalState: 0
