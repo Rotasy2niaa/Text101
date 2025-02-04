@@ -6,30 +6,30 @@ using UnityEngine.UI;
 
 public class AdventureGame : MonoBehaviour
 {
-    [SerializeField] TMP_Text storyTextComponent; // Display story text
-    [SerializeField] GameObject buttonPrefab; // Button prefab
-    [SerializeField] Transform buttonContainer; // Parent object for buttons
-    [SerializeField] State startingState; // Initial state
-    [SerializeField] Image stateImageComponent; // State image component
-    [SerializeField] AudioSource backgroundMusic; // Background music
-    [SerializeField] AudioSource gameMusic; // Game music
-    [SerializeField] float typingSpeed = 0.05f; // Typing speed
-    [SerializeField] Transform finalPhotoContainer; // Container for final photos
-    [SerializeField] GameObject photoImagePrefab; // Prefab for displaying photos
+    [SerializeField] TMP_Text storyTextComponent; // 显示故事文本
+    [SerializeField] GameObject buttonPrefab; // 按钮预制体
+    [SerializeField] Transform buttonContainer; // 按钮的父对象
+    [SerializeField] State startingState; // 初始状态
+    [SerializeField] Image stateImageComponent; // 状态图片组件
+    [SerializeField] AudioSource backgroundMusic; // 背景音乐
+    [SerializeField] AudioSource gameMusic; // 游戏音乐
+    [SerializeField] float typingSpeed = 0.05f; // 打字速度
+    [SerializeField] Transform finalPhotoContainer; // 容纳最终照片的父对象
+    [SerializeField] GameObject photoImagePrefab; // 照片图片预制体
 
-    private State state; // Current state
-    private bool isTyping = false; // Prevent duplicate typing
-    private bool isCustomMusicPlaying = false; // Track custom music state
-    private AudioClip currentCustomMusic = null; // Current custom music
-    private List<Sprite> takenPhotos = new List<Sprite>(); // List of taken photos
-    private List<string> takenPhotoDescriptions = new List<string>(); // List of photo descriptions
+    private State state; // 当前状态
+    private bool isTyping = false; // 防止重复打字
+    private bool isCustomMusicPlaying = false; // 自定义音乐状态
+    private AudioClip currentCustomMusic = null; // 当前自定义音乐
+    private List<Sprite> takenPhotos = new List<Sprite>(); // 存储玩家拍摄的图片
+    private List<string> takenPhotoDescriptions = new List<string>(); // 存储玩家拍摄的描述
 
     void Start()
     {
         state = startingState;
-        UpdateStateImage(); // Update the image
-        backgroundMusic.Play(); // Play background music
-        StartCoroutine(PlayTypewriterEffect(state.GetStateStory(), ShowOptions)); // Start story
+        UpdateStateImage(); // 更新图片
+        backgroundMusic.Play(); // 播放背景音乐
+        StartCoroutine(PlayTypewriterEffect(state.GetStateStory(), ShowOptions)); // 显示初始文本
     }
 
     private IEnumerator PlayTypewriterEffect(string fullText, System.Action onComplete = null)
@@ -100,7 +100,7 @@ public class AdventureGame : MonoBehaviour
 
         State nextState = state.GetNextStates()[index];
 
-        // Record photos if applicable
+        // 如果是照片选项，记录照片
         if (state.IsPhotoOption(index))
         {
             Sprite photoSprite = state.GetPhotoSprite(index);
@@ -108,29 +108,29 @@ public class AdventureGame : MonoBehaviour
 
             if (photoSprite != null)
             {
-                takenPhotos.Add(photoSprite); // Add photo
+                takenPhotos.Add(photoSprite); // 添加照片
             }
 
             if (!string.IsNullOrEmpty(photoDescription))
             {
-                takenPhotoDescriptions.Add(photoDescription); // Add description
+                // 添加描述（用于拼接在最终文本中）
+                takenPhotoDescriptions.Add(photoDescription);
             }
         }
 
-        // Handle music
+        // 音乐逻辑
         if (state.HasMusicChoice())
         {
             AudioClip selectedMusic = state.GetSelectedMusic(index);
-            PlayCustomMusic(selectedMusic);
-        }
-        else
-        {
-            StopCustomMusic();
+            if (selectedMusic != null)
+            {
+                PlayCustomMusic(selectedMusic); // 播放新音乐
+            }
         }
 
         state = nextState;
 
-        // Check if it's the final state
+        // 如果是最终状态，显示照片和文字
         if (state.IsFinalState())
         {
             DisplayFinalPhotosAndText();
@@ -144,10 +144,9 @@ public class AdventureGame : MonoBehaviour
 
     private void UpdateStateImage()
     {
+        // 如果当前状态是最终状态，隐藏图片组件
         if (state.IsFinalState())
         {
-            // 如果是最终状态，隐藏状态图片
-            stateImageComponent.sprite = null;
             stateImageComponent.gameObject.SetActive(false);
         }
         else if (state.GetStateImage() != null)
@@ -161,10 +160,12 @@ public class AdventureGame : MonoBehaviour
         }
     }
 
-
     private void PlayCustomMusic(AudioClip selectedMusic)
     {
-        if (selectedMusic == currentCustomMusic) return;
+        if (selectedMusic == currentCustomMusic)
+        {
+            return; // 如果当前音乐已经在播放，不做任何改变
+        }
 
         currentCustomMusic = selectedMusic;
         isCustomMusicPlaying = true;
@@ -201,6 +202,10 @@ public class AdventureGame : MonoBehaviour
             Destroy(child.gameObject);
         }
 
+        // 隐藏状态图片，防止显示上一个 State 的图片
+        stateImageComponent.sprite = null;
+        stateImageComponent.gameObject.SetActive(false);
+
         // 拼接照片文字描述
         string photosText = "Today I looked back at my journey. Here are the photos I took:\n\n";
 
@@ -214,10 +219,6 @@ public class AdventureGame : MonoBehaviour
         }
         storyTextComponent.text = photosText;
 
-        // 清空之前的状态图片
-        stateImageComponent.sprite = null;
-        stateImageComponent.gameObject.SetActive(false);
-
         // 动态生成照片
         int maxPhotos = Mathf.Min(takenPhotos.Count, 3); // 最多显示三张
         for (int i = 0; i < maxPhotos; i++)
@@ -225,51 +226,57 @@ public class AdventureGame : MonoBehaviour
             GameObject photoImage = Instantiate(photoImagePrefab, finalPhotoContainer);
             Image imageComponent = photoImage.GetComponent<Image>();
 
-            // 设置照片 Sprite 数据
+            // 使用正确的 Sprite 数据
             imageComponent.sprite = takenPhotos[i];
         }
 
-        // 显示选项按钮（Play Again）
+        // 显示选项按钮（Play Again 或其他）
         ShowFinalOptions();
     }
 
 
     private void ShowFinalOptions()
     {
-        // Clear previous buttons
+        // 清空之前的按钮
         foreach (Transform child in buttonContainer)
         {
             Destroy(child.gameObject);
         }
 
-        // Create "Play Again" button
+        // 创建 "Play Again" 按钮
         GameObject playAgainButton = Instantiate(buttonPrefab, buttonContainer);
         TMP_Text buttonText = playAgainButton.GetComponentInChildren<TMP_Text>();
         buttonText.text = "> Play Again";
 
+        // 添加点击事件，重新开始游戏
         playAgainButton.GetComponent<Button>().onClick.AddListener(() =>
         {
             RestartGame();
         });
 
+        // 显示按钮容器
         buttonContainer.gameObject.SetActive(true);
     }
 
     private void RestartGame()
     {
-        // Reset the game state
+        // 重置游戏状态
         state = startingState;
         takenPhotos.Clear();
         takenPhotoDescriptions.Clear();
 
-        // Clear final photos
+        // 清空照片容器
         foreach (Transform child in finalPhotoContainer)
         {
             Destroy(child.gameObject);
         }
 
-        // Restart game
+        // 恢复初始状态
         UpdateStateImage();
         StartCoroutine(PlayTypewriterEffect(state.GetStateStory(), ShowOptions));
+
+        // 重置音乐
+        StopCustomMusic();
+        backgroundMusic.Play();
     }
 }
